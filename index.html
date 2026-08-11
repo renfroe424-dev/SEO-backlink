@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional SEO backlink service with human-written content on real websites.">
+  <title>Professional SEO Backlink Service</title>
+  <style>
+    :root {
+      --ink: #13233a;
+      --muted: #5d6b7a;
+      --navy: #173b59;
+      --navy-dark: #0f2b43;
+      --teal: #168c88;
+      --teal-dark: #0f6f6c;
+      --soft: #f4f8fa;
+      --line: #dce6eb;
+      --white: #ffffff;
+      --shadow: 0 18px 46px rgba(15, 43, 67, 0.12);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+
+    /* SECTION 1 — HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 24px 64px;
+      background:
+        radial-gradient(circle at 85% 14%, rgba(22, 140, 136, 0.12), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbfc 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -180px;
+      bottom: -230px;
+      border-radius: 50%;
+      background: rgba(23, 59, 89, 0.05);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(1160px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-copy { max-width: 690px; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--teal);
+      border-radius: 99px;
+    }
+
+    h1, h2, p { margin-top: 0; }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: clamp(2.35rem, 5vw, 4.65rem);
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+      color: var(--navy-dark);
+    }
+
+    .subheadline {
+      max-width: 640px;
+      margin-bottom: 30px;
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      color: var(--muted);
+    }
+
+    .cta-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      min-height: 56px;
+      padding: 15px 26px;
+      border-radius: 14px;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 800;
+      line-height: 1.25;
+      text-align: center;
+      text-decoration: none;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      box-shadow: 0 12px 30px rgba(22, 140, 136, 0.25);
+      transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+
+    .cta:hover,
+    .cta:focus-visible {
+      background: var(--teal-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(22, 140, 136, 0.28);
+    }
+
+    .trust-line {
+      margin: 0;
+      font-size: .91rem;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .trust-line::before {
+      content: "✓";
+      margin-right: 7px;
+      color: var(--teal-dark);
+      font-weight: 900;
+    }
+
+    .product-card {
+      width: min(470px, 100%);
+      justify-self: end;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: rgba(255,255,255,.92);
+      box-shadow: var(--shadow);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      object-fit: contain;
+    }
+
+    /* SECTION 2 — SOCIAL PROOF */
+    .social-proof {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .social-proof img {
+      width: 100%;
+      max-width: none;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      object-fit: cover;
+    }
+
+    /* SECTION 3 — PROBLEM + SOLUTION */
+    .problem-solution {
+      padding: 88px 24px;
+      background: var(--navy-dark);
+      color: var(--white);
+    }
+
+    .problem-inner {
+      width: min(1040px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+      gap: 72px;
+      align-items: center;
+    }
+
+    .problem-solution .eyebrow { color: #7ee3df; }
+    .problem-solution .eyebrow::before { background: #7ee3df; }
+
+    .problem-solution h2 {
+      margin-bottom: 0;
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      color: var(--white);
+    }
+
+    .problem-copy {
+      margin: 0;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.06);
+      font-size: clamp(1.02rem, 1.5vw, 1.16rem);
+      color: #d9e4eb;
+      box-shadow: 0 18px 50px rgba(0,0,0,.12);
+    }
+
+    /* SECTION 4 — LOWER */
+    .lower {
+      padding: 64px 24px;
+      background: var(--soft);
+      border-top: 1px solid var(--line);
+    }
+
+    .lower-inner {
+      width: min(1040px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 44px;
+      align-items: start;
+    }
+
+    .policy-card,
+    .disclosure-card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--white);
+    }
+
+    .lower h2 {
+      margin-bottom: 14px;
+      font-size: 1.12rem;
+      color: var(--navy-dark);
+    }
+
+    .lower p {
+      margin-bottom: 14px;
+      font-size: .9rem;
+      color: var(--muted);
+    }
+
+    .lower p:last-child { margin-bottom: 0; }
+
+    @media (max-width: 850px) {
+      .hero { padding: 52px 20px 48px; }
+
+      .hero-inner,
+      .problem-inner,
+      .lower-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner { gap: 38px; }
+      .hero-copy { max-width: none; }
+      .product-card { justify-self: center; width: min(520px, 100%); }
+      .problem-inner { gap: 34px; }
+      .lower-inner { gap: 22px; }
+    }
+
+    @media (max-width: 560px) {
+      .hero { padding: 42px 16px 38px; }
+      .problem-solution { padding: 62px 16px; }
+      .lower { padding: 42px 16px; }
+
+      h1 { font-size: clamp(2.15rem, 11vw, 3rem); }
+
+      .cta-wrap {
+        width: 100%;
+        align-items: center;
+      }
+
+      .cta {
+        width: 100%;
+        max-width: 440px;
+        padding-inline: 18px;
+      }
+
+      .trust-line { text-align: center; }
+      .product-card { padding: 12px; border-radius: 20px; }
+      .problem-copy, .policy-card, .disclosure-card { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION 1: HERO SECTION -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">SEO Backlink Service</div>
+        <h1>Support Higher Google Rankings and More Qualified Traffic with Professional SEO Backlink Service</h1>
+        <p class="subheadline">If your website isn’t ranking high enough to attract qualified organic traffic, strengthen your backlink profile.</p>
+        <div class="cta-wrap">
+          <a class="cta" href="https://www.checkout-ds24.com/redir/615550/Kiere1989/" rel="nofollow sponsored">Strengthen Your Backlink Profile Now</a>
+          <p class="trust-line">60-Day Money-Back Guarantee</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="product.PNG" alt="Product image">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: SOCIAL PROOF SECTION -->
+  <section class="social-proof">
+    <img src="socialproof.PNG" alt="Social proof image">
+  </section>
+
+  <!-- SECTION 3: PROBLEM + SOLUTION SECTION -->
+  <section class="problem-solution">
+    <div class="problem-inner">
+      <div>
+        <div class="eyebrow">A Different Backlink Approach</div>
+        <h2>Struggling to Rank Higher? Skip Forum Links and Overpriced Guest Posts for Human-Written SEO Content</h2>
+      </div>
+      <p class="problem-copy">When your website isn’t ranking where you want it to, quality backlinks can be hard to find. Many services rely on forum links, comment links, or overpriced guest posts. Backlink Bundle takes a different approach with human-written SEO content on real websites, contextual DoFollow links, and links that are indexed and tracked. Explore how the service works and see whether it fits your SEO goals.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 4: LOWER SECTION -->
+  <section class="lower">
+    <div class="lower-inner">
+      <div class="policy-card">
+        <h2>Privacy Reassurance</h2>
+        <p>This website uses cookies and similar technologies to analyze traffic and support advertising, affiliate tracking, and website performance.</p>
+        <p>Third-party vendors, including Google, may use cookies or similar identifiers to serve ads and measure ad performance based on a user's prior visits to this website or other websites. These technologies may collect information such as browser type, device type, general location, pages visited, and interaction data.</p>
+        <p>If you click a link on this website and are redirected to a third-party website, that third-party provider may collect information according to their own privacy policies and terms.</p>
+        <p>You can control or disable cookies through your browser settings. However, disabling cookies may affect the functionality of this website.</p>
+        <p>By continuing to use this website, you acknowledge and accept the use of cookies and similar technologies as described above.</p>
+      </div>
+
+      <div class="disclosure-card">
+        <h2>Affiliate Disclosure</h2>
+        <p>This page contains affiliate links. If you choose to make a purchase, we may earn a commission at no additional cost to you.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
